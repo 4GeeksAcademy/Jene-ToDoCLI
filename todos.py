@@ -1,59 +1,59 @@
 # Sherwood Logistics
 
-from functions import create_task
-last_id: int = 0
+from functions import add_one_task
+from functions import print_list
+from functions import delete_task
+task_id: int = 0
 tasks:dict[int, dict[str, str | int]] ={}
 while True:
-    print("\n")
-    print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+    print("\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
     print(" >>>----->   SHERWOOD Logistics   <-----<<< ")
     print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
     print("\n1. Create Task")
     print("2. List Task")
     print("3. Delete Task")
-    print("q. Quit")
-    choice:str=input("\nPick a number:")
+    print("4. Quit")
+    choice:str = input("\nPick a number, my Lord! :")
+
     if choice == "1":
         print("\nCreate new Mission (Add task)")
         task_name:str=input("\nEnter task name: ")
-        person:str=input("Enter person assigned:")
-        priority:str=input("Enter priority of task:")
-        last_id += 1
-        task_id = last_id
-        tasks[id] = create_task(
-            task_name,person,priority,id
+        person:str=input("Enter person assigned: ")
+        priority:str=input("Enter priority of task: ")
+        task_id += 1 
+        tasks[task_id] = add_one_task(
+            task_name,person,priority,task_id
         )
-        print(f"\n Task Name :{task_name} is now added to tasks.\n")
+        print(f"\nTask : '{task_name}' is now added to the list of tasks.\n")
+    
     elif choice == "2":   
-        print("Review Mission (List task details)")
-        lookup_id:int = input("Enter task ID: ")
-
-        if not lookup_id :
-            for task in tasks.values():
-                print(f"{task['id']}:{task['task_name']} - {task['person']}")
+        print("\nReview Mission (List of task with details)")
+        
+        list_id:str = input("Enter task ID (or press 0 to view all) : ")
+        if not list_id.isdigit():
+            print("Please enter a 'number' for ID.")
             continue
-
-        if int(lookup_id) not in tasks.keys():
-            print(f"Task {lookup_id} not found")
+        else:
+            task_found = print_list(int(list_id),tasks)
             continue
-
-        task = tasks[int(lookup_id)]
-        print(f"{task['id']}:{task['task_name']} - {task['person']}")
-
 
     elif choice == "3":
-        print("Mission Accomplished / Aborted (Delete Task)")
+        print("\nMission Accomplished or Aborted (Delete Task)")
         
-        lookup_id:int = input("Enter task ID to delete: ")
-        if int(lookup_id) not in tasks.keys():
-            print(f"Task {lookup_id} not found")
-            continue 
-        if input("Are you sure y/n ?").lower() == "y" :
-            del tasks[int(lookup_id)]
+        delete_id:str = input("Enter task ID to delete: ")
+        if not delete_id.isdigit():
+            print("My Lord, Please enter a 'number' for ID.")
+            continue
+        else :
+            confirm_delete = delete_task(int(delete_id),tasks) 
+            continue
 
-    elif choice == "q" or choice == "Q":
-        print(" ")
-        print("Unstring bows (Quit) ")
+    elif choice.lower() == "q" or choice == "4":
+        print("\nUnstring bows and retreat !\n")
         quit()
+
+    elif not choice.isdigit():
+            print("\nMy Lord, Please enter a 'number' !")
+            continue
 
 
