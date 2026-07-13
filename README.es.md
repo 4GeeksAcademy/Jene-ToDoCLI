@@ -1,23 +1,19 @@
-# Python Hello
+# Sherwood Logistics
+- A ToDo List CLI using Python
 
-El boilerplate más básico para comenzar un proyecto en Python en 4Geeks. Inicia tu primer proyecto en Python desde cero.
+## To Run
+### Command
+- To execute use the command below on terminal
+    `python3 main.py`
 
-## ¿Qué hacer a continuación?
-
-Abre el archivo `main.py` y comienza a escribir tu código.
-
-Ejecuta tu código escribiendo el siguiente comando en tu terminal:
-
-```bash
-$ python main.py
-```
-
-Puedes crear e incluir tantos archivos de Python (también conocidos como módulos) como desees utilizando las declaraciones de importación.
-
-## Requisitos
-
-Asegúrate de tener Python instalado en tu computadora. Te recomendamos encarecidamente [instalar Python a través de Pyenv](https://4geeks.com/es/how-to/que-es-pyenv-y-como-instalar-pyenv) para evitar conflictos de versiones en el futuro.
-
-### Contribuidores
-
-Esta plantilla fue creada como parte de los [Recursos de Python de 4Geeks](https://4geeks.com/es/technology/python) para el aprendizaje en [4Geeks.com](https://4geeks.com) por [Alejandro Sanchez](https://twitter.com/alesanchezr) y [muchos otros contribuyentes](https://github.com/4GeeksAcademy/python-hello/graphs/contributors).
+### Sample Data
+- Use the following data to create a task
+  - Data 1
+    Task Name : Recruit bowmen from Loxley village
+    Person : Robin
+    Priority : Medium
+  - Data 2
+    Task Name :Smuggle medical supplies past guards
+    Person : Friar
+    Priority : High
+    

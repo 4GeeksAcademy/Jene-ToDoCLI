@@ -1,7 +1,16 @@
-# ToDo List CLI in Python
-
-Confirm customs clearance for Shipment #4092
-Assign backup driver for Chicago delivery route
-Update manifest for delayed evening freight train
-Call warehouse client regarding damaged pallet at Dock 4
-Verify reefer container temperature logs for meat transit
+id,task_name,person,priority
+1,Intercept Nottingham tax carriage,Robin,High
+2,Distribute gold to village,John,High
+3,Gather herbs for potions,Friar,Medium
+4,Forge fifty broadhead arrows,Will,High
+5,Scout guards at border,Marian,Low
+6,Smuggle grain past tollgate,Much,Medium
+7,Intercept royal courier message,Marian,High
+8,Train recruits in marksmanship,Robin,Medium
+9,Bribe tavern keeper for gossip,Will,Low
+10,Smelt iron cooking spits,John,Low
+11,Infiltrate sheriff archery tournament,Robin,High
+12,Heal wounded camp scouts,Friar,High
+13,Purchase sturdy timber,John,Medium
+14,Stitch green camouflage tunics,Much,Low
+15,Sabotage castle drawbridge chains,Alan,Medium
